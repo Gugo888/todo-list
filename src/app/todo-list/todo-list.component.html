@@ -1,1 +1,4 @@
 <h1>TODO LIST</h1>
+<input #rec>
+<button (click)="f(+rec.value)">sxmi</button>
+<h1 *ngFor="let item of todos">{{item.id}} {{item.title}}</h1>

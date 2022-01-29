@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-todo-list',
@@ -7,6 +8,13 @@ import { Component } from '@angular/core';
 })
 export class TodoListComponent {
 
-  constructor() {}
-}
+  todos = this.data.getAllTodos()
+ 
+  constructor(private data: DataService) {}
 
+  f(id: number) {
+    const todo = this.data.getTodoById(id);
+    alert(todo.title);
+  }
+  
+}
