@@ -4,7 +4,7 @@ import { Todo, User } from './types';
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
+export class UsersService {
 
   users: User[] = [
     {
