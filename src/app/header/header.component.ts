@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,6 +7,22 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  constructor() {}
+  constructor(private router: Router) {}
+
+  users() {
+    this.router.navigate(['/users']);
+  }
+  todo() {
+    this.router.navigate(['/todo-list'])
+  }
+  home() {
+    this.router.navigate([""])
+  }
+  about() {
+    this.router.navigate(["/about-us"])
+  }
+  banks() {
+    this.router.navigate(["/banks"])
+  }
 
 }
